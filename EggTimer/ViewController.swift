@@ -36,11 +36,8 @@ class ViewController: UIViewController {
             }
         }
         func timerAlarm() {
-            do {
-                player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "alarm_sound", ofType:"mp3")!))
-                player!.play()
-            } catch {
-            }
+            player = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "alarm_sound", ofType:"mp3")!))
+            player!.play()
         }
     }
 }
